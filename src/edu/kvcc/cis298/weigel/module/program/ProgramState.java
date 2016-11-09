@@ -1,5 +1,6 @@
 package edu.kvcc.cis298.weigel.module.program;
 
-public class ProgramState
+public
+class ProgramState
 {
 }

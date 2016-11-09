@@ -1,13 +1,22 @@
 package edu.kvcc.cis298.weigel.task;
+
 import edu.kvcc.cis298.weigel.module.ModuleLocator;
 
-public abstract class Task
-	implements Runnable
+public abstract
+class Task
 {
-	@Override
-	public abstract void run();
+	public abstract
+	void initializeTask( ModuleLocator moduleLocator );
 
-	public abstract void init( ModuleLocator moduleLocator );
+	public abstract
+	void run();
 
-	public abstract String getType();
+	public
+	String getType()
+	{
+		return this
+			       .getClass()
+			       .getName()
+			       .toString();
+	}
 }

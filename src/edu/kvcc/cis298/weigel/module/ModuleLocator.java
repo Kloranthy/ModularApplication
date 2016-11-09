@@ -1,70 +1,94 @@
 package edu.kvcc.cis298.weigel.module;
+
 import java.util.HashMap;
-import edu.kvcc.cis298.weigel.module.application.ApplicationModule;
-import edu.kvcc.cis298.weigel.module.program.ProgramModule;
 
 /**
  * used to locate and retrieve modules
- * 
- * todo: change so that it checks application state, and
- * if not stopping or stopped, it loads the missing module
- * with a classloader/factory
- * 
+ * <p>
+ * todo: change so that it checks application state, and if not
+ * stopping or stopped, it loads the missing module with a
+ * classloader/factory
+ * <p>
  * todo: consider changing keys from string to class/interface
- * 
- * 
- * @author Josh
  *
+ * @author Josh
  */
-public class ModuleLocator
+public
+class ModuleLocator
 {
 	// private variables
-	private static ModuleLocator mInstance;
-	private HashMap<String, ApplicationModule> mApplicationModules;
-	private HashMap<String, ProgramModule> mProgramModules;
+	private static ModuleLocator
+		mInstance;
+	private        HashMap<String, Module>
+		mModules;
+
+	// private methods
+	private
+	ModuleLocator()
+	{
+		mModules
+			= new HashMap<String, Module>();
+	}
 
 	// public methods
-	public static ModuleLocator getInstance()
+	public static
+	ModuleLocator getInstance()
 	{
-		if( mInstance == null )
+		if ( mInstance
+		     == null )
 		{
-			mInstance = new ModuleLocator();
+			mInstance
+				= new ModuleLocator();
 		}
 		return mInstance;
 	}
 
-	public boolean hasApplicationModule( String moduleName )
+	public
+	void addModule( Module module )
 	{
-		return mApplicationModules.containsKey( moduleName );
-	}
-
-	public boolean hasProgramModule( String moduleName )
-	{
-		return mProgramModules.containsKey( moduleName );
-	}
-
-	public ApplicationModule getApplicationModule( String moduleName )
-	{
-		if( hasApplicationModule( moduleName ) )
+		String
+			moduleName
+			= module.getName();
+		if ( hasModule( moduleName ) )
 		{
-			return mApplicationModules.get( moduleName );
+			// TODO: add option on whether to replace
+			// existing module or throw error
+		}
+		else
+		{
+			mModules.put(
+				moduleName,
+				module
+			            );
+		}
+	}
+
+	public
+	boolean hasModule( String moduleName )
+	{
+		return mModules.containsKey( moduleName );
+	}
+
+	public
+	Module getModule( String moduleName )
+	{
+		if ( hasModule( moduleName ) )
+		{
+			return mModules.get( moduleName );
 		}
 		return null;
 	}
 
-	public ProgramModule getProgramModule( String moduleName )
+	public
+	void removeModule( String moduleName )
 	{
-		if( hasProgramModule( moduleName ) )
+		if ( hasModule( moduleName ) )
 		{
-			return mProgramModules.get( moduleName );
+			Module
+				module
+				= mModules.remove( moduleName );
+			module.destroyModule();
+			// assert null ?
 		}
-		return null;
-	}
-
-	// private methods
-	private ModuleLocator()
-	{
-		mApplicationModules = new HashMap<String, ApplicationModule>();
-		mProgramModules = new HashMap<String, ProgramModule>();
 	}
 }

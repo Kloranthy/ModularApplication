@@ -1,27 +1,43 @@
 package edu.kvcc.cis298.weigel.module.application.controller;
-import java.util.HashMap;
+
 import edu.kvcc.cis298.weigel.task.Task;
 
-public class State
+import java.util.HashMap;
+
+public
+class State
 {
 	//created, ready, running, stopping, stopped;
 	// enum states
-	private State mState;
-	private HashMap<State, Task> mTransitions;
+	private State
+		mState;
+	private HashMap<State, Task>
+		mTransitions;
 
-	public void updateState( State state )
+	public static
+	void main( String[] args )
 	{
-		if( mState.canTransitionTo( state ) )
+		State
+			state
+			= new State();
+	}
+
+	public
+	void updateState( State state )
+	{
+		if ( mState.canTransitionTo( state ) )
 		{
 			mState.transitionTo( state );
 		}
 	}
 
-	private void transitionTo( State state )
+	private
+	void transitionTo( State state )
 	{
-		if( mState.canTransitionTo( state ) )
+		if ( mState.canTransitionTo( state ) )
 		{
-			mState = state;
+			mState
+				= state;
 			// event stuff
 		}
 		else
@@ -30,16 +46,25 @@ public class State
 		}
 	}
 
-	public void setTransitionTo( State state, Task task )
+	public
+	void setTransitionTo(
+		                    State state,
+		                    Task task
+	                    )
 	{
-		mTransitions.put( state, task );
+		mTransitions.put(
+			state,
+			task
+		                );
 	}
 
-	public boolean canTransitionTo( State state )
+	public
+	boolean canTransitionTo( State state )
 	{
-		if( mTransitions.containsKey( state ) )
+		if ( mTransitions.containsKey( state ) )
 		{
-			return mState.getTransitionTo( state ) != null;
+			return mState.getTransitionTo( state )
+			       != null;
 		}
 		else
 		{
@@ -47,13 +72,9 @@ public class State
 		}
 	}
 
-	private Task getTransitionTo( State state )
+	private
+	Task getTransitionTo( State state )
 	{
 		return mState.getTransitionTo( state );
-	}
-
-	public static void main( String[] args )
-	{
-		State state = new State();
 	}
 }
