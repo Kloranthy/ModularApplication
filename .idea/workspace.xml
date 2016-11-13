@@ -2,26 +2,125 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="907c152f-0928-4f25-873f-199b38ca09e7" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/TaskQueue.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/module/Event.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/module/EventHandler.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/module/application/ApplicationModule.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/task/InitProgramTask.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/task/StartProgramTask.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/task/StopProgramTask.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/implementations/ConsoleLogModule.java" afterPath="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/implementations/ConsoleLogModule.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/implementations/ModularJavaFXApplication.java" afterPath="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/implementations/ModularJavaFXApplication.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/implementations/SingleThreadedExecutionModule.java" afterPath="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/implementations/SingleThreadedExecutionModule.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/module/Module.java" afterPath="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/module/Module.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/module/ModuleLocator.java" afterPath="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/module/ModuleLocator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/module/application/LogModule.java" afterPath="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/module/application/LogModule.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/module/application/ModularApplication.java" afterPath="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/module/application/ModularApplication.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/module/application/controller/State.java" afterPath="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/module/application/controller/State.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/module/application/execution/ExecutionModule.java" afterPath="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/module/application/execution/ExecutionModule.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/module/application/file/FileModule.java" afterPath="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/module/application/file/FileModule.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/module/program/ProgramModule.java" afterPath="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/module/program/ProgramModule.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/module/program/ProgramState.java" afterPath="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/module/program/ProgramState.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/task/Task.java" afterPath="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/task/Task.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/abstractions/application/controller/ApplicationEvent.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/abstractions/application/controller/ApplicationTask.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/abstractions/application/controller/events/command/DestroyApplicationEvent.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/abstractions/application/controller/events/command/InitializeApplicationEvent.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/abstractions/application/controller/events/command/PauseApplicationEvent.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/abstractions/application/controller/events/command/ResumeApplicationEvent.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/abstractions/application/controller/events/command/StartApplicationEvent.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/abstractions/application/controller/events/command/StopApplicationEvent.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/abstractions/application/controller/events/result/ApplicationCreatedEvent.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/abstractions/application/controller/events/result/ApplicationDestroyedEvent.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/abstractions/application/controller/events/result/ApplicationInitializedEvent.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/abstractions/application/controller/events/result/ApplicationPausedEvent.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/abstractions/application/controller/events/result/ApplicationResumedEvent.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/abstractions/application/controller/events/result/ApplicationStartedEvent.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/abstractions/application/controller/events/result/ApplicationStoppedEvent.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/abstractions/application/controller/tasks/DestroyApplicationTask.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/abstractions/application/controller/tasks/InitializeApplicationTask.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/abstractions/application/controller/tasks/PauseApplicationTask.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/abstractions/application/controller/tasks/ResumeApplicationTask.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/abstractions/application/controller/tasks/StopApplicationTask.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/abstractions/controller/Controller.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/abstractions/controller/EventHandler.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/abstractions/controller/State.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/abstractions/controller/event/Event.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/abstractions/controller/event/command/Command.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/abstractions/controller/event/result/Result.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/abstractions/module/controller/ModuleController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/abstractions/module/controller/ModuleState.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/abstractions/module/controller/ModuleTask.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/abstractions/module/controller/events/command/DestroyModuleEvent.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/abstractions/module/controller/events/command/InitializeModuleEvent.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/abstractions/module/controller/events/command/PauseModuleEvent.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/abstractions/module/controller/events/command/ResumeModuleEvent.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/abstractions/module/controller/events/command/StartModuleEvent.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/abstractions/module/controller/events/command/StopModuleEvent.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/abstractions/module/controller/events/result/ModuleCreatedEvent.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/abstractions/module/controller/events/result/ModuleDestroyedEvent.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/abstractions/module/controller/events/result/ModuleInitializedEvent.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/abstractions/module/controller/events/result/ModulePausedEvent.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/abstractions/module/controller/events/result/ModuleResumedEvent.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/abstractions/module/controller/events/result/ModuleStartedEvent.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/abstractions/module/controller/events/result/ModuleStoppedEvent.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/abstractions/module/controller/tasks/DestroyModuleTask.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/abstractions/module/controller/tasks/InitializeModuleTask.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/abstractions/module/controller/tasks/PauseModuleTask.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/abstractions/module/controller/tasks/ResumeModuleTask.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/abstractions/module/controller/tasks/StopModuleTask.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/abstractions/modules/execution/ExecutionModule.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/abstractions/modules/log/LogModule.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/abstractions/modules/program/ProgramModule.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/abstractions/modules/program/controller/ProgramController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/abstractions/modules/program/controller/ProgramState.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/abstractions/modules/program/controller/events/DestroyProgramEvent.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/abstractions/modules/program/controller/events/InitializeProgramEvent.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/abstractions/modules/program/controller/events/PauseProgramEvent.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/abstractions/modules/program/controller/events/ProgramCreatedEvent.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/abstractions/modules/program/controller/events/ResumeProgramEvent.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/abstractions/modules/program/controller/events/StartProgramEvent.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/abstractions/modules/program/controller/events/StopProgramEvent.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/abstractions/modules/program/controller/tasks/DestroyProgramTask.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/abstractions/modules/program/controller/tasks/ProgramController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/abstractions/modules/program/controller/tasks/StartProgramTask.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/abstractions/modules/program/controller/tasks/StopProgramTask.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/abstractions/task/Task.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/abstractions/task/events/TaskCreatedEvent.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/abstractions/task/events/TaskDestroyedEvent.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/abstractions/task/events/TaskInitializedEvent.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/abstractions/task/events/TaskPausedEvent.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/abstractions/task/events/TaskResumedEvent.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/abstractions/task/events/TaskStartedEvent.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/abstractions/task/events/TaskStoppedEvent.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/implementations/application/ModularJavaFXApplication.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/implementations/noticonnect/database/NotificationDbSchema.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/implementations/noticonnect/database/NotificationHelper.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/implementations/noticonnect/model/Notification.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/event/Event.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/event/EventHandler.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/implementations/InitializeEvent.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/implementations/ModularJavaFXApplication.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/module/ModuleState.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/module/application/LogModule.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/module/application/controller/State.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/module/application/event/StartApplicationEvent.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/module/application/execution/ExecutionModule.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/module/program/ProgramModule.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/module/program/ProgramState.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/module/program/task/StartProgramTask.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/module/program/task/StopProgramTask.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/task/Task.java" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/implementations/ConsoleLogModule.java" afterPath="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/implementations/modules/log/ConsoleLogModule.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/implementations/SingleThreadedExecutionModule.java" afterPath="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/implementations/modules/execution/SingleThreadedExecutionModule.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/module/Module.java" afterPath="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/abstractions/module/Module.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/module/ModuleLocator.java" afterPath="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/abstractions/application/ModuleLocator.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/module/application/ApplicationController.java" afterPath="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/abstractions/application/controller/ApplicationController.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/module/application/ApplicationState.java" afterPath="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/abstractions/application/controller/ApplicationState.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/module/application/ModularApplication.java" afterPath="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/abstractions/application/ModularApplication.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/module/application/file/FileModule.java" afterPath="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/abstractions/modules/file/FileModule.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/module/program/task/InitProgramTask.java" afterPath="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/abstractions/modules/program/controller/tasks/InitializeProgramTask.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/task/TaskQueue.java" afterPath="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/implementations/modules/execution/TaskQueue.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/edu/kvcc/cis298/weigel/event/Event.class" afterPath="$PROJECT_DIR$/bin/edu/kvcc/cis298/weigel/event/Event.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/edu/kvcc/cis298/weigel/implementations/ConsoleLogModule.class" afterPath="$PROJECT_DIR$/bin/edu/kvcc/cis298/weigel/implementations/ConsoleLogModule.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/edu/kvcc/cis298/weigel/implementations/ModularJavaFXApplication.class" afterPath="$PROJECT_DIR$/bin/edu/kvcc/cis298/weigel/implementations/ModularJavaFXApplication.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/edu/kvcc/cis298/weigel/implementations/SingleThreadedExecutionModule.class" afterPath="$PROJECT_DIR$/bin/edu/kvcc/cis298/weigel/implementations/SingleThreadedExecutionModule.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/edu/kvcc/cis298/weigel/module/Module.class" afterPath="$PROJECT_DIR$/bin/edu/kvcc/cis298/weigel/module/Module.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/edu/kvcc/cis298/weigel/module/ModuleLocator.class" afterPath="$PROJECT_DIR$/bin/edu/kvcc/cis298/weigel/module/ModuleLocator.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/edu/kvcc/cis298/weigel/module/ModuleState.class" afterPath="$PROJECT_DIR$/bin/edu/kvcc/cis298/weigel/module/ModuleState.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/edu/kvcc/cis298/weigel/module/application/ApplicationController.class" afterPath="$PROJECT_DIR$/bin/edu/kvcc/cis298/weigel/module/application/ApplicationController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/edu/kvcc/cis298/weigel/module/application/ApplicationState.class" afterPath="$PROJECT_DIR$/bin/edu/kvcc/cis298/weigel/module/application/ApplicationState.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/edu/kvcc/cis298/weigel/module/application/LogModule.class" afterPath="$PROJECT_DIR$/bin/edu/kvcc/cis298/weigel/module/application/LogModule.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/edu/kvcc/cis298/weigel/module/application/controller/State.class" afterPath="$PROJECT_DIR$/bin/edu/kvcc/cis298/weigel/module/application/controller/State.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/edu/kvcc/cis298/weigel/module/application/execution/ExecutionModule.class" afterPath="$PROJECT_DIR$/bin/edu/kvcc/cis298/weigel/module/application/execution/ExecutionModule.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/edu/kvcc/cis298/weigel/module/program/ProgramModule.class" afterPath="$PROJECT_DIR$/bin/edu/kvcc/cis298/weigel/module/program/ProgramModule.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/edu/kvcc/cis298/weigel/module/program/ProgramState.class" afterPath="$PROJECT_DIR$/bin/edu/kvcc/cis298/weigel/module/program/ProgramState.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/edu/kvcc/cis298/weigel/module/program/task/InitProgramTask.class" afterPath="$PROJECT_DIR$/bin/edu/kvcc/cis298/weigel/module/program/task/InitProgramTask.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/edu/kvcc/cis298/weigel/module/program/task/StartProgramTask.class" afterPath="$PROJECT_DIR$/bin/edu/kvcc/cis298/weigel/module/program/task/StartProgramTask.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/edu/kvcc/cis298/weigel/module/program/task/StopProgramTask.class" afterPath="$PROJECT_DIR$/bin/edu/kvcc/cis298/weigel/module/program/task/StopProgramTask.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/edu/kvcc/cis298/weigel/task/Task.class" afterPath="$PROJECT_DIR$/bin/edu/kvcc/cis298/weigel/task/Task.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/edu/kvcc/cis298/weigel/task/TaskQueue.class" afterPath="$PROJECT_DIR$/bin/edu/kvcc/cis298/weigel/task/TaskQueue.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="ModularApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -42,43 +141,80 @@
     <favorites_list name="ModularApplication" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5">
-      <split-first>
-        <leaf>
-          <file leaf-file-name="State.java" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/module/application/controller/State.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="528">
-                  <caret line="22" column="4" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="4" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf>
-          <file leaf-file-name="ModularJavaFXApplication.java" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/implementations/ModularJavaFXApplication.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="420">
-                  <caret line="59" column="34" selection-start-line="59" selection-start-column="13" selection-end-line="59" selection-end-column="34" />
-                  <folding>
-                    <element signature="method#init#0;class#ModularJavaFXApplication#0" expanded="true" />
-                    <element signature="method#startApplication#0;class#ModularJavaFXApplication#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+      <file leaf-file-name="ModularApplication.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/abstractions/application/ModularApplication.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="216">
+              <caret line="5" column="27" selection-start-line="5" selection-start-column="27" selection-end-line="5" selection-end-column="27" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Controller.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/abstractions/controller/Controller.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="230">
+              <caret line="37" column="17" selection-start-line="37" selection-start-column="17" selection-end-line="37" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Event.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/abstractions/controller/event/Event.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="243">
+              <caret line="6" column="18" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Module.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/abstractions/module/Module.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="824">
+              <caret line="79" column="42" selection-start-line="79" selection-start-column="42" selection-end-line="79" selection-end-column="42" />
+              <folding>
+                <element signature="method#Module#0;class#Module#0" expanded="true" />
+                <element signature="method#initializeModule#0;class#Module#0" expanded="true" />
+                <element signature="method#startModule#0;class#Module#0" expanded="true" />
+                <element signature="method#pauseModule#0;class#Module#0" expanded="true" />
+                <element signature="method#resumeModule#0;class#Module#0" expanded="true" />
+                <element signature="method#stopModule#0;class#Module#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ModuleController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/abstractions/module/controller/ModuleController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="527">
+              <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ApplicationController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/abstractions/application/controller/ApplicationController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="189">
+              <caret line="7" column="15" selection-start-line="7" selection-start-column="15" selection-end-line="7" selection-end-column="15" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Enum" />
         <option value="Class" />
       </list>
     </option>
@@ -94,17 +230,64 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/implementations/InitializeEvent.java" />
-        <option value="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/implementations/ModularJavaFXApplication.java" />
-        <option value="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/module/application/event/StartApplicationEvent.java" />
+        <option value="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/modules/program/controller/ProgramState.java" />
+        <option value="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/abstractions/State.java" />
+        <option value="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/modules/program/controller/tasks/DestroyProgramTask.java" />
+        <option value="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/modules/program/controller/tasks/StartProgramTask.java" />
+        <option value="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/modules/program/controller/tasks/ProgramController.java" />
+        <option value="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/modules/program/controller/tasks/StopProgramTask.java" />
+        <option value="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/implementations/ConsoleLogModule.java" />
+        <option value="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/implementations/modules/ConsoleLogModule.java" />
+        <option value="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/implementations/modules/SingleThreadedExecutionModule.java" />
+        <option value="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/implementations/modules/log/ConsoleLogModule.java" />
+        <option value="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/implementations/modules/execution/SingleThreadedExecutionModule.java" />
+        <option value="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/abstractions/controller/State.java" />
+        <option value="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/application/controller/ApplicationEvent.java" />
+        <option value="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/application/controller/ApplicationController.java" />
+        <option value="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/application/ModularApplication.java" />
+        <option value="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/implementations/modules/execution/TaskQueue.java" />
+        <option value="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/modules/program/controller/ProgramController.java" />
+        <option value="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/implementations/database/noticonnect/NotificationHelper.java" />
+        <option value="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/abstractions/application/controller/tasks/PauseApplicationTask.java" />
+        <option value="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/abstractions/application/controller/tasks/ResumeApplicationTask.java" />
+        <option value="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/abstractions/application/controller/tasks/StopApplicationTask.java" />
+        <option value="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/abstractions/application/controller/ApplicationController.java" />
+        <option value="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/abstractions/application/controller/tasks/InitializeApplicationTask.java" />
+        <option value="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/abstractions/application/controller/tasks/DestroyApplicationTask.java" />
+        <option value="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/abstractions/module/controller/ModuleController.java" />
+        <option value="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/abstractions/module/controller/ModuleState.java" />
+        <option value="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/abstractions/modules/program/controller/tasks/InitializeProgramTask.java" />
+        <option value="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/implementations/application/ModularJavaFXApplication.java" />
+        <option value="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/abstractions/application/controller/events/command/InitializeApplicationEvent.java" />
+        <option value="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/abstractions/application/controller/events/command/PauseApplicationEvent.java" />
+        <option value="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/abstractions/application/controller/events/command/ResumeApplicationEvent.java" />
+        <option value="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/abstractions/application/controller/events/command/StartApplicationEvent.java" />
+        <option value="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/abstractions/application/controller/events/command/StopApplicationEvent.java" />
+        <option value="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/abstractions/application/controller/events/command/DestroyApplicationEvent.java" />
+        <option value="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/abstractions/controller/event/Command.java" />
+        <option value="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/abstractions/controller/event/Result.java" />
+        <option value="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/abstractions/application/controller/events/result/ApplicationCreatedEvent.java" />
+        <option value="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/abstractions/controller/event/result/Result.java" />
+        <option value="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/abstractions/controller/event/command/Command.java" />
+        <option value="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/implementations/application/ModuleLocator.java" />
+        <option value="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/implementations/application/ModuleLocatorImplementation.java" />
+        <option value="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/abstractions/application/ModuleLocator.java" />
+        <option value="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/abstractions/controller/event/Event.java" />
+        <option value="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/abstractions/application/ModularApplication.java" />
+        <option value="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/abstractions/module/controller/events/command/StartModuleEvent.java" />
+        <option value="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/abstractions/module/controller/events/command/ResumeModuleEvent.java" />
+        <option value="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/abstractions/module/controller/events/command/PauseModuleEvent.java" />
+        <option value="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/abstractions/module/controller/events/command/StopModuleEvent.java" />
+        <option value="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/abstractions/module/controller/events/command/InitializeModuleEvent.java" />
+        <option value="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/abstractions/module/controller/events/command/DestroyModuleEvent.java" />
+        <option value="$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/abstractions/module/Module.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="55" />
-    <option name="y" value="-8" />
-    <option name="width" value="1873" />
-    <option name="height" value="1096" />
+    <option name="x" value="63" />
+    <option name="width" value="928" />
+    <option name="height" value="1080" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -131,9 +314,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -188,6 +369,32 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="abstractions" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ModularApplication" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ModularApplication" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="weigel" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="abstractions" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="module" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -210,67 +417,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="module" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="application" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ModularApplication" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ModularApplication" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="weigel" />
+              <option name="myItemId" value="abstractions" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="module" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="application" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="event" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ModularApplication" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ModularApplication" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="weigel" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="module" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="application" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -296,7 +447,19 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="implementations" />
+              <option name="myItemId" value="abstractions" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="module" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controller" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="events" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -318,22 +481,109 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="abstractions" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="module" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controller" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="events" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="command" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ModularApplication" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ModularApplication" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="weigel" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="abstractions" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controller" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ModularApplication" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ModularApplication" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="weigel" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="abstractions" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controller" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="event" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
-    <property name="settings.editor.splitter.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.General" />
+    <property name="settings.editor.splitter.proportion" value="0.20478001" />
     <property name="full.screen.before.presentation.mode" value="false" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Josh\workspace\ModularApplication\src\edu\kvcc\cis298\weigel\task\events" />
+      <recent name="C:\Users\Josh\workspace\ModularApplication\src\edu\kvcc\cis298\weigel\module\tasks" />
+      <recent name="C:\Users\Josh\workspace\ModularApplication\src\edu\kvcc\cis298\weigel\module\events" />
+      <recent name="C:\Users\Josh\workspace\ModularApplication\src\edu\kvcc\cis298\weigel\interfaces" />
+      <recent name="C:\Users\Josh\workspace\ModularApplication\src\edu\kvcc\cis298\weigel\application\tasks" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="edu.kvcc.cis298.weigel.implementations.application" />
+    </key>
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="edu.kvcc.cis298.weigel.modules.program.controller.tasks" />
+      <recent name="edu.kvcc.cis298.weigel.task" />
+      <recent name="edu.kvcc.cis298.weigel.application.events" />
       <recent name="edu.kvcc.cis298.weigel.implementations" />
     </key>
   </component>
@@ -530,8 +780,8 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="55" y="-8" width="1873" height="1096" extended-state="6" />
-    <editor active="true" />
+    <frame x="63" y="0" width="928" height="1080" extended-state="0" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -540,22 +790,22 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33817986" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2752193" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3285273" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -573,9 +823,9 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17447495" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30372807" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32928064" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -595,7 +845,9 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="antWorkspaceConfiguration">
@@ -603,96 +855,410 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/module/application/ApplicationController.java">
+    <entry file="file://$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/abstractions/modules/program/controller/events/ResumeProgramEvent.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-          <folding />
+        <state relative-caret-position="81">
+          <caret line="3" column="15" selection-start-line="3" selection-start-column="15" selection-end-line="3" selection-end-column="15" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/implementations/ConsoleLogModule.java">
+    <entry file="file://$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/abstractions/modules/program/controller/events/StartProgramEvent.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
+        <state relative-caret-position="108">
+          <caret line="4" column="15" selection-start-line="4" selection-start-column="15" selection-end-line="4" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/abstractions/modules/program/controller/events/StopProgramEvent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="81">
+          <caret line="3" column="15" selection-start-line="3" selection-start-column="15" selection-end-line="3" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/abstractions/modules/program/controller/ProgramState.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="81">
+          <caret line="3" column="6" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/abstractions/modules/program/controller/tasks/DestroyProgramTask.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="2" column="15" selection-start-line="2" selection-start-column="15" selection-end-line="2" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/abstractions/modules/program/controller/tasks/StartProgramTask.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="2" column="15" selection-start-line="2" selection-start-column="15" selection-end-line="2" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/abstractions/modules/program/controller/tasks/ProgramController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="5" column="21" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/abstractions/modules/program/controller/tasks/StopProgramTask.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="351">
+          <caret line="15" column="31" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/implementations/modules/execution/SingleThreadedExecutionModule.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1107">
+          <caret line="47" column="26" selection-start-line="47" selection-start-column="26" selection-end-line="47" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/implementations/modules/log/ConsoleLogModule.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/abstractions/application/controller/ApplicationEvent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="2" column="15" selection-start-line="2" selection-start-column="15" selection-end-line="2" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/abstractions/controller/State.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/abstractions/modules/log/LogModule.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
           <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/abstractions/modules/file/FileModule.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="5" column="10" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/abstractions/modules/execution/ExecutionModule.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/abstractions/modules/program/controller/ProgramController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="27">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/implementations/modules/execution/TaskQueue.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="17" column="4" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/implementations/noticonnect/database/NotificationHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="81">
+          <caret line="3" column="6" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/implementations/noticonnect/database/NotificationDbSchema.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="81">
+          <caret line="3" column="6" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/abstractions/application/controller/tasks/StopApplicationTask.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="4" column="1" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/abstractions/application/controller/tasks/ResumeApplicationTask.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="2" column="15" selection-start-line="2" selection-start-column="15" selection-end-line="2" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/abstractions/application/controller/tasks/PauseApplicationTask.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="81">
+          <caret line="2" column="15" selection-start-line="2" selection-start-column="15" selection-end-line="2" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/abstractions/application/controller/tasks/InitializeApplicationTask.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="21" column="18" selection-start-line="21" selection-start-column="18" selection-end-line="21" selection-end-column="18" />
           <folding>
-            <element signature="method#startModule#0;class#ConsoleLogModule#0" expanded="true" />
-            <element signature="method#pauseModule#0;class#ConsoleLogModule#0" expanded="true" />
-            <element signature="method#resumeModule#0;class#ConsoleLogModule#0" expanded="true" />
-            <element signature="method#stopModule#0;class#ConsoleLogModule#0" expanded="true" />
-            <element signature="method#destroyModule#0;class#ConsoleLogModule#0" expanded="true" />
+            <element signature="method#initializeTask#0;class#InitializeApplicationTask#0" expanded="false" />
+            <element signature="method#startTask#0;class#InitializeApplicationTask#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/event/EventHandler.java">
+    <entry file="file://$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/abstractions/application/controller/tasks/DestroyApplicationTask.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="10" selection-start-line="3" selection-start-column="10" selection-end-line="3" selection-end-column="10" />
+        <state relative-caret-position="378">
+          <caret line="16" column="56" selection-start-line="16" selection-start-column="56" selection-end-line="16" selection-end-column="56" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/event/Event.java">
+    <entry file="file://$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/abstractions/modules/program/controller/tasks/InitializeProgramTask.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="6" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
-          <folding />
+        <state relative-caret-position="270">
+          <caret line="11" column="21" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
+          <folding>
+            <element signature="method#InitializeProgramTask#0;class#InitializeProgramTask#0" expanded="false" />
+            <element signature="method#initializeTask#0;class#InitializeProgramTask#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/implementations/InitializeEvent.java">
+    <entry file="file://$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/abstractions/module/controller/ModuleState.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="3" column="5" selection-start-line="3" selection-start-column="5" selection-end-line="3" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/abstractions/module/controller/ModuleTask.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/implementations/application/ModularJavaFXApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="36" column="8" selection-start-line="36" selection-start-column="8" selection-end-line="36" selection-end-column="8" />
+          <folding>
+            <element signature="method#init#0;class#ModularJavaFXApplication#0" expanded="false" />
+            <element signature="method#start#0;class#ModularJavaFXApplication#0" expanded="false" />
+            <element signature="method#startApplication#0;class#ModularJavaFXApplication#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/abstractions/application/controller/events/command/InitializeApplicationEvent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/abstractions/application/controller/events/command/PauseApplicationEvent.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="297">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
+          <caret line="11" column="4" selection-start-line="6" selection-start-column="1" selection-end-line="11" selection-end-column="4" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/module/application/event/StartApplicationEvent.java">
+    <entry file="file://$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/abstractions/application/controller/events/command/ResumeApplicationEvent.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="5" column="1" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
-          <folding />
+        <state relative-caret-position="162">
+          <caret line="6" column="1" selection-start-line="6" selection-start-column="1" selection-end-line="11" selection-end-column="4" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/implementations/ModularJavaFXApplication.java">
+    <entry file="file://$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/abstractions/application/controller/events/command/StartApplicationEvent.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="59" column="34" selection-start-line="59" selection-start-column="13" selection-end-line="59" selection-end-column="34" />
+        <state relative-caret-position="189">
+          <caret line="7" column="1" selection-start-line="7" selection-start-column="1" selection-end-line="12" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/abstractions/application/controller/events/command/StopApplicationEvent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="6" column="1" selection-start-line="6" selection-start-column="1" selection-end-line="11" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/abstractions/application/controller/events/result/ApplicationCreatedEvent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="11" column="20" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/abstractions/controller/event/command/Command.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="9" column="6" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/implementations/application/ModuleLocatorImplementation.java" />
+    <entry file="file://$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/abstractions/application/controller/events/command/DestroyApplicationEvent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="5" column="16" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/abstractions/application/ModuleLocator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="972">
+          <caret line="32" column="4" selection-start-line="32" selection-start-column="4" selection-end-line="32" selection-end-column="4" />
           <folding>
-            <element signature="method#init#0;class#ModularJavaFXApplication#0" expanded="true" />
-            <element signature="method#startApplication#0;class#ModularJavaFXApplication#0" expanded="true" />
+            <element signature="method#ModuleLocator#0;class#ModuleLocator#0" expanded="true" />
+            <element signature="method#getInstance#0;class#ModuleLocator#0" expanded="true" />
+            <element signature="method#hasModule#0;class#ModuleLocator#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/implementations/SingleThreadedExecutionModule.java">
+    <entry file="file://$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/abstractions/controller/event/result/Result.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="348">
-          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+        <state relative-caret-position="459">
+          <caret line="16" column="1" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/abstractions/application/controller/ApplicationController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="7" column="15" selection-start-line="7" selection-start-column="15" selection-end-line="7" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/abstractions/application/ModularApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="5" column="27" selection-start-line="5" selection-start-column="27" selection-end-line="5" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/abstractions/controller/Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="37" column="17" selection-start-line="37" selection-start-column="17" selection-end-line="37" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/abstractions/controller/event/Event.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="6" column="18" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/abstractions/module/controller/ModuleController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/abstractions/module/controller/events/command/ResumeModuleEvent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="9" column="21" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
           <folding>
-            <marker date="1478649113484" expanded="false" signature="56:211" ph="..." />
-            <marker date="1478649113484" expanded="false" signature="355:390" ph="{...}" />
-            <marker date="1478649113484" expanded="true" signature="443:502" ph="{...}" />
-            <marker date="1478649113484" expanded="true" signature="544:715" ph="{...}" />
-            <marker date="1478649113484" expanded="true" signature="757:832" ph="{...}" />
-            <marker date="1478649113484" expanded="true" signature="761:829" ph="//..." />
-            <marker date="1478649113484" expanded="true" signature="875:959" ph="{...}" />
-            <marker date="1478649113484" expanded="true" signature="879:956" ph="//..." />
-            <marker date="1478649113484" expanded="true" signature="1000:1071" ph="{...}" />
-            <marker date="1478649113484" expanded="true" signature="1004:1068" ph="//..." />
-            <marker date="1478649113484" expanded="true" signature="1115:1147" ph="{...}" />
+            <element signature="e#225#226#0" expanded="true" />
+            <element signature="e#256#257#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/module/application/controller/State.java">
+    <entry file="file://$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/abstractions/module/controller/events/command/StartModuleEvent.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="22" column="4" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="4" />
-          <folding />
+        <state relative-caret-position="324">
+          <caret line="9" column="21" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
+          <folding>
+            <element signature="e#223#224#0" expanded="true" />
+            <element signature="e#253#254#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/abstractions/module/controller/events/command/PauseModuleEvent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="11" column="30" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
+          <folding>
+            <element signature="e#223#224#0" expanded="true" />
+            <element signature="e#253#254#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/abstractions/module/controller/events/command/StopModuleEvent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="8" column="22" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
+          <folding>
+            <element signature="e#222#223#0" expanded="true" />
+            <element signature="e#251#252#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/abstractions/module/controller/events/command/InitializeModuleEvent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="9" column="26" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
+          <folding>
+            <element signature="e#235#236#0" expanded="true" />
+            <element signature="e#270#271#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/abstractions/module/controller/events/command/DestroyModuleEvent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="6" column="1" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
+          <folding>
+            <element signature="e#228#229#0" expanded="true" />
+            <element signature="e#260#261#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/kvcc/cis298/weigel/abstractions/module/Module.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="824">
+          <caret line="79" column="42" selection-start-line="79" selection-start-column="42" selection-end-line="79" selection-end-column="42" />
+          <folding>
+            <element signature="method#Module#0;class#Module#0" expanded="true" />
+            <element signature="method#initializeModule#0;class#Module#0" expanded="true" />
+            <element signature="method#startModule#0;class#Module#0" expanded="true" />
+            <element signature="method#pauseModule#0;class#Module#0" expanded="true" />
+            <element signature="method#resumeModule#0;class#Module#0" expanded="true" />
+            <element signature="method#stopModule#0;class#Module#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
